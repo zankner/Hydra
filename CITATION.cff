@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 'Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Zachary
+    family-names: Ankner
+  - given-names: Rishab
+    family-names: Parthasarathy
+  - given-names: Aniruddha
+    family-names: Nrusimha
+  - given-names: Christopher
+    family-names: Rinard
+  - given-names: Jonathan
+    family-names: Ragan-Kelley
+  - given-names: William
+    family-names: Brandon
+repository-code: 'https://github.com/zankner/Hydra'
+url: 'https://arxiv.org/abs/2402.05109'
+abstract: >-
+  To combat the memory bandwidth-bound nature of autoregressive LLM inference, previous research has proposed the speculative decoding framework. To perform speculative decoding, a small draft model proposes candidate continuations of the input sequence, that are then verified in parallel by the base model. One way to specify the draft model, as used in the recent Medusa decoding framework, is as a collection of light-weight heads, called draft heads, that operate on the base model's hidden states. To date, all existing draft heads have been sequentially independent, meaning that they speculate tokens in the candidate continuation independently of any preceding tokens in the candidate continuation. In this work, we propose Hydra heads, a sequentially dependent, drop-in replacement for standard draft heads that significantly improves speculation accuracy. Decoding with Hydra heads improves throughput compared to Medusa decoding with standard draft heads. We further explore the design space of Hydra head training objectives and architectures, and propose a carefully-tuned Hydra head recipe, which we call Hydra++, that improves decoding throughput by 1.31x and 2.71x compared to Medusa decoding and autoregressive decoding, respectively. Overall, Hydra heads are a simple intervention on standard draft heads that significantly improve the end-to-end speed of draft head based speculative decoding.
+license: Apache-2.0
+date-released: '2023-09-10'
